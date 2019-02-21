@@ -14,3 +14,5 @@ public class Magic {
 	}
 }
 
+//3 is the result no matter what integer you choose as the origianl number.
+
