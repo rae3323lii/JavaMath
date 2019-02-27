@@ -1,0 +1,59 @@
+//A simple Droid (robot) that can be activated, charged, and hover above ground. 
+
+public class Droid {
+  
+  int batteryLevel;
+  public Droid(){
+    batteryLevel = 100;
+  }
+  
+  public void activate(){
+    System.out.println("Activate. How can I help you?");
+    batteryLevel -= 5;
+    System.out.println("Battery lever is: " + batteryLevel + " percent.");
+  }
+  
+  public void chargeBattery(int hours){
+    System.out.println("Droid Charging...");
+    if (batteryLevel == 100){
+      //batteryLevel = 100;
+      System.out.println(batteryLevel);
+    } else {
+      batteryLevel += hours;
+      System.out.println(batteryLevel);
+    }
+  }
+  
+  public int checkBatteryLevel(){
+    System.out.println(batteryLevel);
+    return batteryLevel;
+  }
+    
+  public void hover(int feet){
+    if (feet > 2){
+      System.out.println("Error! I cannot hover above 2 feet.");
+    } else {
+      System.out.println("Hovering...");
+      batteryLevel -= 20;
+      System.out.println(batteryLevel);
+    }
+  }
+ 
+  public static void main (String[] args){
+    Droid droid = new Droid();
+    droid.activate();
+    droid.chargeBattery(5);
+    droid.hover(1);
+    droid.checkBatteryLevel(); 
+  }
+}
+
+
+Results:
+Activate. How can I help you?
+Battery lever is: 95 percent.
+Droid Charging...
+97
+Hovering...
+77
+77
